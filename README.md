@@ -10,7 +10,7 @@ An AI-powered Gradio app that separates audio into stems, applies smart mixing a
 - Mastering pipeline with compression, EQ, stereo spread, and soft limiting
 
 ## 🧠 Requirements
-
+- Open-AI-API-Key
 Install dependencies:
 
 ```bash
