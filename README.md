@@ -11,7 +11,7 @@ An AI-powered Gradio app that separates audio into stems, applies smart mixing a
 
 ## 🧠 Requirements
 - Open-AI-API-Key
-Install dependencies:
+- Install dependencies:
 
 ```bash
 pip install -r requirements.txt
