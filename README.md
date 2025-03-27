@@ -1,4 +1,4 @@
-# 🎶 AI Mixing Copilot
+# 🎶 AI Mixing Copilot - "Mixxer"
 
 An AI-powered Gradio app that separates audio into stems, applies smart mixing adjustments (EQ, compression, FX), and produces a remastered track. Inspired by tools like Suno.ai.
 
