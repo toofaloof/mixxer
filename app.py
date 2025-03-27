@@ -34,7 +34,7 @@ def apply_eq(audio_data, sr, eq_settings):
     output = np.zeros_like(audio_data)
 
     for band, gain in eq_settings.items():
-        gain = float(gain)  # 🔑 convert to float here
+        gain = float(gain)
         lowcut, highcut = bands[band]
         b, a = butter_bandpass(lowcut, highcut, sr)
         filtered = lfilter(b, a, audio_data)
