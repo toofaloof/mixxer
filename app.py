@@ -311,7 +311,7 @@ def merge_stems_to_master(stem_paths, output_path="output/remastered.wav"):
         audio = AudioSegment.from_file(path)
 
         # limit each stem individually
-        # audio = soft_limiter(audio,threshold_db=-10.0)
+        audio = soft_limiter(audio,threshold_db=-10.0)
 
         # Pan according to predefined stereo spread (if stereo)
         pan = PANNING_MAP.get(name, 0.0)
