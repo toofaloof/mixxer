@@ -8,7 +8,7 @@ An AI-powered Gradio app that separates audio into stems, applies smart mixing a
 - AI-assisted mixing with OpenAI + audio analysis
 - Built with Gradio for web interaction
 - Mastering pipeline with compression, EQ, stereo spread, and soft limiting
-- 3min Song takes ~40 seconds to get each stem and the whole song mixed and mastered on a RTX 3090, 24Gb
+- 3min song takes ~40 seconds to get each stem and the whole song mixed and mastered on a RTX 3090, 24Gb
 
 ## 🧠 Requirements
 - Open-AI-API-Key
