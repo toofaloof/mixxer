@@ -292,7 +292,7 @@ PANNING_MAP = {
     "other": 0.4       # More right
 }
 
-def soft_limiter(audio, threshold_db=-1.0):
+def soft_limiter(audio, threshold_db=-10.0):
     # Hard limiting to avoid clipping above threshold
     peak_db = audio.max_dBFS
     if peak_db > threshold_db:
@@ -310,8 +310,8 @@ def merge_stems_to_master(stem_paths, output_path="output/remastered.wav"):
     for name, path in stem_paths:
         audio = AudioSegment.from_file(path)
 
-        # AGC: normalize each stem individually
-        # audio = effects.normalize(audio)
+        # limit each stem individually
+        # audio = soft_limiter(audio,threshold_db=-10.0)
 
         # Pan according to predefined stereo spread (if stereo)
         pan = PANNING_MAP.get(name, 0.0)
@@ -329,7 +329,7 @@ def merge_stems_to_master(stem_paths, output_path="output/remastered.wav"):
         final_mix = final_mix.overlay(stem)
 
     # Apply soft limiter
-    final_mix = soft_limiter(final_mix, threshold_db=-1.0)
+    final_mix = soft_limiter(final_mix, threshold_db=-10.0)
 
     # Export final
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
