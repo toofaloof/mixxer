@@ -16,3 +16,7 @@ An AI-powered Gradio app that separates audio into stems, applies smart mixing a
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Coming Soon:
+Developing a system-level integration for FL Studio that maps all accessible plugin parameters to MIDI controls, enabling real-time sound manipulation driven by natural language prompts controlled by a sound-classifier model.
